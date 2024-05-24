@@ -1,3 +1,5 @@
+import { FaArrowRight } from "react-icons/fa";
+
 interface BlogCardProps {
   image: string;
   badge: string;
@@ -16,10 +18,15 @@ const BlogCard: React.FC<BlogCardProps> = ({
   alt,
 }): React.JSX.Element => {
   return (
-    <main className="w-[340px] border rounded-lg bg-white border-neutral-200 shadow-md">
+    <main className="w-[340px] border rounded-lg bg-white border-neutral-200 shadow-sm">
       {/* Card border radius and object fit */}
       <div>
-        <img src={image} alt={alt || "Room thumbnail"} loading="lazy" />
+        <img
+          src={image}
+          alt={alt || "Room thumbnail"}
+          loading="lazy"
+          className="rounded-tl-lg rounded-tr-lg"
+        />
       </div>
       <div className="px-4 py-6 flex flex-col gap-3">
         <div>
@@ -31,8 +38,11 @@ const BlogCard: React.FC<BlogCardProps> = ({
         </div>
         <div className="flex flex-col gap-6">
           <p className="text-base text-neutral-600 font-medium">{excerpt}</p>
-          {/* Arrow and button states */}
-          <p className="text-base text-indigo-700 font-medium">{linkText}</p>
+          {/* button states and extract into component */}
+          <a href="" target="_blank" className="flex gap-[6px] items-center text-indigo-700">
+            <p className="text-base font-medium">{linkText}</p>
+            <FaArrowRight size={16} />{" "}
+          </a>
         </div>
       </div>
     </main>

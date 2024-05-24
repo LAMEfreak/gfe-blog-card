@@ -44,7 +44,6 @@ const BlogCard: React.FC<BlogCardProps> = ({
           <p className="text-base text-neutral-600 font-medium line-clamp-3">
             {excerpt}
           </p>
-          {/* button states and extract into component */}
           <a
             href="https://www.greatfrontend.com/projects/u/LAMEfreak"
             target="_blank"

@@ -32,7 +32,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
       </div>
       <div className="px-4 py-6 flex flex-col gap-3">
         <div>
-          <p className="inline-block mb-2 text-sm text-green-700 bg-green-50 border-2 border-green-200 px-2 py-[2px] rounded-2xl">
+          <p className="inline-block mb-2 text-sm text-green-700 bg-green-50 border border-green-200 px-2 py-[2px] rounded-2xl">
             {badge}
           </p>
           {/* line-clamp truncates a block of text after a specific number of lines. */}

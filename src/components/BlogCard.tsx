@@ -22,12 +22,13 @@ const BlogCard: React.FC<BlogCardProps> = ({
       <div className="h-72">
         <img
           src={image}
-          alt={alt || "Room thumbnail"}
+          alt={alt || ""}
           loading="lazy"
-          // object-cover specifies image resize to fit fixed height container
-          // h-full and w-full specifies image to take full height and width of container
+          // `object-cover` specifies image resize to fit fixed height container
+          // `h-full` and `w-full` specifies image to take full height and width of container
           // this is so that cards have the same height despite images of different dimensions
-          className="rounded-tl-lg rounded-tr-lg object-cover h-full w-full"
+          // alternatively, use `size-full` to set width and height to be 100% of the parent container’s width and height.
+          className="rounded-tl-lg rounded-tr-lg size-full"
         />
       </div>
       <div className="px-4 py-6 flex flex-col gap-3">
@@ -50,7 +51,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
             className="flex gap-[6px] rounded-[4px] items-center text-indigo-700 hover:text-[#3730A3] transition-all duration-300 ease-in-out focus:ring-2 disabled:text-[#A3A3A3]"
           >
             <p className="text-base font-medium">{linkText}</p>
-            <FaArrowRight size={16} />{" "}
+            <FaArrowRight size={16} aria-hidden="true" />{" "}
           </a>
         </div>
       </div>

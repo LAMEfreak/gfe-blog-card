@@ -36,7 +36,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
             {badge}
           </p>
           {/* line-clamp truncates a block of text after a specific number of lines. */}
-          <p className="text-lg text-neutral-900 font-semibold line-clamp-1">
+          <p className="text-lg text-neutral-900 font-semibold line-clamp-2">
             {title}
           </p>
         </div>
@@ -50,6 +50,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
             className="flex gap-[6px] rounded-[4px] items-center text-indigo-700 hover:text-[#3730A3] transition-all duration-300 ease-in-out focus:ring-2 disabled:text-[#A3A3A3]"
           >
             <p className="text-base font-medium">{linkText}</p>
+            {/* `aria-hidden` is used to indicate that an element is only visible to screen readers */}
             <FaArrowRight size={16} aria-hidden="true" />{" "}
           </a>
         </div>

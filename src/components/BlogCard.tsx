@@ -28,7 +28,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           // `h-full` and `w-full` specifies image to take full height and width of container
           // this is so that cards have the same height despite images of different dimensions
           // alternatively, use `size-full` to set width and height to be 100% of the parent container’s width and height.
-          className="rounded-tl-lg rounded-tr-lg size-full"
+          className="rounded-tl-lg rounded-tr-lg object-cover size-full"
         />
       </div>
       <div className="px-4 py-6 flex flex-col gap-3">
